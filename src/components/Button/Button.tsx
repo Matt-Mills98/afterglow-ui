@@ -13,7 +13,7 @@ export type ButtonProps = {
 const StyledButton = styled.button<ButtonProps>`
   border: 0;
   line-height: 1;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
   font-weight: 700;
   font-weight: bold;
