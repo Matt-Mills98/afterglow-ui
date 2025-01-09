@@ -17,7 +17,7 @@ const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
   font-weight: 700;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 6px;
   display: inline-block;
   color: ${(props) => (props.primary ? "#fff" : "#000")};
   background-color: ${(props) => (props.primary ? "#CC7834" : "#f4c4c4")};
