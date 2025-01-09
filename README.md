@@ -1,2 +1,2 @@
 # glow-ui
-React Component Library -- In progress
+React Component Library -- In progress.
