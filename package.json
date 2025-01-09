@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React Component Library",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@Matt-Mills98"
+    "registry": "https://npm.pkg.github.com/Matt-Mills98"
   },
   "type": "module",
   "main": "dist/index.cjs.js",
