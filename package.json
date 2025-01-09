@@ -4,7 +4,7 @@
   "description": "React Component Library",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@Matt-Mills98"
-    },
+  },
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -20,7 +20,8 @@
     "test-watch": "vitest",
     "test:ui": "vitest --ui",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "npm run build"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -29,7 +30,6 @@
       "npm run test"
     ]
   },
- 
   "keywords": [],
   "author": "",
   "license": "ISC",
