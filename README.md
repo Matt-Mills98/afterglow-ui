@@ -1,2 +1,2 @@
-# jiggle-ui
+# glow-ui
 React Component Library
