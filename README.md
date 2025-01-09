@@ -1,2 +1,2 @@
-# fluff-ui
+# jiggle-ui
 React Component Library
