@@ -1,7 +1,10 @@
 {
-  "name": "fluff-ui",
+  "name": "glow-ui",
   "version": "1.0.0",
   "description": "React Component Library",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@matt-mills98"
+    },
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -26,6 +29,7 @@
       "npm run test"
     ]
   },
+ 
   "keywords": [],
   "author": "",
   "license": "ISC",
