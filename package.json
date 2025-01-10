@@ -1,5 +1,5 @@
 {
-  "name": "@matt-mills98/glow-ui",
+  "name": "glow-ui",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -23,7 +23,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashish-simform/sld-ui.git"
+    "url": "git+https://github.com/matt-mills98/glow-ui.git"
   },
   "keywords": [],
   "author": "",
