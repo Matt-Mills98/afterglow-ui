@@ -1,5 +1,5 @@
 {
-  "name": "afterglow-ui",
+  "name": "@matt-mills98/afterglow-ui",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -72,7 +72,7 @@
     ]
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/@matt-mills98"
   },
   "dependencies": {
     "react": "^19.0.0",
