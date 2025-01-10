@@ -72,7 +72,7 @@
     ]
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@{USER_NAME}"
+    "registry": "https://npm.pkg.github.com/@matt-mills98"
   },
   "dependencies": {
     "react": "^19.0.0",
