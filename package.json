@@ -75,6 +75,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
+    "@chromatic-com/storybook": "^3.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
