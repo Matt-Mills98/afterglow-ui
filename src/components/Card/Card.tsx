@@ -12,56 +12,57 @@ export type CardProps = {
   backgroundColor?: string;
   useInsetBorder?: boolean;
   insetBorderSize?: string;
-  borderColors?:string | string[];
+  insetBorderColors?:string | string[];
+  glowSpread?:string;
+  glowDensity?:string;
+  glow?: boolean;
   onClick?: MouseEventHandler<HTMLDivElement>;
 };
+const createBackground = (colors: string[]|string|undefined) =>{
+  const test = `conic-gradient(
+    from var(--border-angle), ${colors instanceof Array ? colors.join(', '): colors});`
+  console.log(test);
+  return  test;
+}
 
 const StyledCard = styled.div<CardProps>`
---inset-border-size: -${(props) => props.insetBorderSize || '3px'};
+--inset-border-size: -${(props) => props.insetBorderSize || '2px'};
 --border-angle: 0deg;
 --filter-size:1em;
 --rotation-speed: ${(props) => props.rotationSpeed || '3000ms'};
---color-1:rgba(0, 0, 0, 0);
---color-2:rgb(64, 49, 26);
---color-3: rgb(226, 9, 246);
---color-4:rgb(9, 163, 246);
---color-5:rgb(255, 0, 247);
 
 position: relative;
 height: ${(props) => props.height || 'auto'};
 width: ${(props) => props.width || 'auto'};
 padding: ${(props) => props.padding || '1rem'};
 border-radius: ${(props) => props.borderRadius || '.5rem'};
-color: var(--color-4);
-font-size: 15px;
 background: ${(props)=> props.backgroundColor || '#000'};
 &:hover{
-  --filter-size: 2em;
   --rotation-speed: 1000ms;
-  --inset-border-size: -5px;
-}
-${(props) => props.useInsetBorder && ('&::before,')}
-&::after {
+  --inset-border-size: -4px;
+};
+${(props) => props.useInsetBorder && (`&::before {
   content: "";
-  z-index:-1;
+  z-index: -1;
   position: absolute;
   inset: var(--inset-border-size);
   transition-duration: 300ms;
-  background: conic-gradient(
-    from var(--border-angle),
-    var(--color-5),
-    var(--color-4),
-    var(--color-3),
-    var(--color-4),
-    var(--color-5)
-  );
+  background: ${props.insetBorderColors};
   animation: rotation var(--rotation-speed) linear infinite;
   border-radius: inherit;
-}
+  };`)}
 
-&::after {
-  filter: blur(var(--filter-size));
- };
+${(props) => props.glow && (`&::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: -${props.glowDensity};
+  transition-duration: 300ms;
+  background: ${props.insetBorderColors};
+  animation: rotation var(--rotation-speed) linear infinite;
+  border-radius: inherit;
+  filter: blur(2em);
+};`)}
 
 @keyframes rotation {
   0% {--border-angle : 0deg}
@@ -83,6 +84,10 @@ const Card: React.FC<CardProps> = ({
   backgroundColor,
   useInsetBorder,
   insetBorderSize,
+  insetBorderColors,
+  glowSpread,
+  glowDensity,
+  glow,
   onClick,
   ...props
 }) => {
@@ -97,6 +102,10 @@ const Card: React.FC<CardProps> = ({
       backgroundColor={backgroundColor}
       useInsetBorder={useInsetBorder}
       insetBorderSize={insetBorderSize}
+      insetBorderColors={createBackground(insetBorderColors)}
+      glowSpread={glowSpread}
+      glowDensity={glowDensity}
+      glow={glow}
       {...props}>
     </StyledCard>
   );

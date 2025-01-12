@@ -19,6 +19,10 @@ export const Primary: Story = {
     backgroundColor: "#000",
     useInsetBorder: true,
     insetBorderSize: "3px",
+    insetBorderColors: ['#FF0000', '#00FF00', '#0000FF'],
+    glowSpread: '2em',
+    glowDensity:'2em',
+    glow: true,
     onClick: () => console.log("Card"),
   },
 };
