@@ -9,12 +9,14 @@ const Example: FC<CardProps> = ({
   borderRadius = "2em",
   rotationSpeed = "4000ms",
   backgroundColor = "#000",
-  useInsetBorder = true,
-  insetBorderSize = '3px',
-  insetBorderColors = ['#FF0000', '#00FF00', '#0000FF'],
+  useBorder = true,
+  borderSize = '3px',
+  glowColors = ['#FF0000', '#00FF00', '#0000FF'],
   glowSpread='2em',
-  glowDensity='2em',
+  glowSize='2em',
   glow=true,
+  glowType='Inner',
+  gradientType = 'Conic',
 }) => {
   return (
     <div
@@ -33,12 +35,14 @@ const Example: FC<CardProps> = ({
         borderRadius={borderRadius}
         rotationSpeed={rotationSpeed}
         backgroundColor={backgroundColor}
-        useInsetBorder={useInsetBorder}
-        insetBorderSize={insetBorderSize}
-        insetBorderColors={insetBorderColors}
-        glowDensity={glowDensity}
+        useBorder={useBorder}
+        borderSize={borderSize}
+        glowColors={glowColors}
+        glowSize={glowSize}
         glowSpread={glowSpread}
         glow={glow}
+        glowType={glowType}
+        gradientType={gradientType}
       />
     </div>
   );

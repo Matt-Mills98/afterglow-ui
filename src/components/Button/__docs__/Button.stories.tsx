@@ -11,12 +11,21 @@ type Story = StoryObj<typeof Example>;
 
 export const Primary: Story = {
   args: {
-    text: "Hello",
+    text: "HELLO",
     primary: true,
     fontSize: "10px",
     disabled: false,
-    size: "small",
+    size: "large",
+    useBorder: true,
+    glow: true,
+    glowColors: ["blue", "red"],
+    glowSize: "1em",
+    glowSpread: "1em",
+    glowType: "Outer",
+    gradientType: "Linear",
+    borderSize: "2px",
     onClick: () => console.log("Button"),
+    padding: "10px",
   },
 };
 export const Secondary: Story = {
